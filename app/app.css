@@ -11,6 +11,7 @@ h1 {
 /* View: Phone list */
 .phones {
   list-style: none;
+  margin-left: 15%;
 }
 
 .phones li {
@@ -92,3 +93,77 @@ h1 {
   font-size: 1.2em;
   font-weight: bold;
 }
+
+
+
+.navbar--fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 1100;
+  color: azure;
+}
+
+#toggle-navbar {
+  position: fixed;
+  height: 110px;
+  background: white;
+  z-index: 1050;
+  width: 100%;
+}
+
+#submenu-toggle {
+  margin-top: 64px;
+}
+
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+  padding-left: 250px;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  overflow-x: hidden;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+
+.panel-footer{
+   padding: 0 15px;
+   height: 20%;
+   line-height: 80px;
+   text-align: center; 
+   color: #777;
+   border: 1px solid;
+   border-color: #e7e7e7;
+   background-color: #0f0c0c;
+ }
